@@ -1,0 +1,8 @@
+{
+  "name": "Sector Multi-Agent Demo",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "python -m pip install --user -r requirements.txt",
+  "postStartCommand": "bash -c 'python app.py > /tmp/sector-agent-demo.log 2>&1 &'",
+  "forwardPorts": [7860],
+  "portsAttributes": {"7860": {"label": "Gradio", "onAutoForward": "openBrowser"}}
+}
